@@ -39,6 +39,12 @@ return {
 				capabilities = capabilities,
 			})
 
+			local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+			for type, icon in pairs(signs) do
+				local hl = "DiagnosticSign" .. type
+				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+			end
+
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
