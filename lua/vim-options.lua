@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set scrolloff=8")
+vim.opt.termguicolors = true
 vim.g.mapleader = " "
 
 -- Navigate vim panes better

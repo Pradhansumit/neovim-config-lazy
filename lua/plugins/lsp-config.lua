@@ -51,7 +51,7 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 			--open Mason
-			vim.keymap.set("n", "<c-m>", ":Mason<CR>", {})
+			--vim.keymap.set("n", "<c-m>", ":Mason<CR>", {})
 		end,
 	},
 }
