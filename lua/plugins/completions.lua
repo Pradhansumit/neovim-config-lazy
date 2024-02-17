@@ -7,7 +7,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-buffer", -- source for text in buffer
 			"hrsh7th/cmp-path", -- source for file system paths
-			"saadparwaiz1/cmp_luasnip", -- for lua autocompletion
+			--"saadparwaiz1/cmp_luasnip", -- for lua autocompletion
 			"rafamadriz/friendly-snippets", --useful snippet library
 		},
 		config = function()
@@ -33,6 +33,8 @@ return {
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
+
+			require("luasnip").filetype_extend("python", { "django" }) -- to get django snippets
 
 			cmp.setup({
 				snippet = {
